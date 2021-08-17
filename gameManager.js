@@ -28,8 +28,8 @@ let GameManager = {
 
         let getButton = document.querySelector(".newGameBTN")
 
-        getButton.innerHTML = '<button type="button" class="btn-inside" onclick="GameManager.setInside()">Binnen</button>' +
-            '<button type="button" class="btn-outside" onclick="GameManager.setOutside()">Buiten</button>'
+        getButton.innerHTML = '<button type="button" class="btn-inside" onclick="GameManager.setInside()">Inside</button>' +
+            '<button type="button" class="btn-outside" onclick="GameManager.setOutside()">Outside</button>'
 
         //Reset background-color each round
         document.body.style.backgroundColor = 'white'
@@ -148,7 +148,7 @@ let GameManager = {
 
         let getButton = document.querySelector(".newGameBTN")
 
-        getButton.innerHTML = '<div class="newGameBTN"><button type="button" onClick="GameManager.setGameStart()">Nieuw Spel</button></div>'
+        getButton.innerHTML = '<div class="newGameBTN"><button type="button" onClick="GameManager.setGameStart()">New Game</button></div>'
 
     },
     setGameScore: function () {
@@ -156,11 +156,11 @@ let GameManager = {
         let getLoseCounter = document.querySelector(".loses")
 
         if(winCounter > 0) {
-            getWinCounter.innerHTML = '<h3>Aantal gewonnen games: '+ winCounter +'</h3>'
+            getWinCounter.innerHTML = '<h3>Games Won: '+ winCounter +'</h3>'
         }
 
         if(loseCounter > 0) {
-            getLoseCounter.innerHTML = '<h3>Aantal verloren games: '+ loseCounter +'</h3>'
+            getLoseCounter.innerHTML = '<h3>Games Lost: '+ loseCounter +'</h3>'
         }
     },
     gameWon: function () {
@@ -168,8 +168,8 @@ let GameManager = {
 
         if (winCounter === 10){
             getField.innerHTML = '<div  class="game-end">' +
-                '<h1>Gefeliciteerd u heeft gewonnen!</h1>' +
-                '<button type="button" class="resetGame-btn" onclick=GameManager.resetGame()>Nieuw Spel</button>' +
+                '<h1>You have won the Match!!</h1>' +
+                '<button type="button" class="resetGame-btn" onclick=GameManager.resetGame()>New Game</button>' +
                 '</div>'
         }
     },
@@ -178,8 +178,8 @@ let GameManager = {
 
         if (loseCounter === 10){
             getField.innerHTML = '<div  class="game-end">' +
-                '<h1>Helaas u heeft verloren!</h1>' +
-                '<button type="button" class="resetGame-btn" onclick=GameManager.resetGame()>Nieuw Spel</button>' +
+                '<h1>You have lost the Match!</h1>' +
+                '<button type="button" class="resetGame-btn" onclick=GameManager.resetGame()>New Game</button>' +
                 '</div>'
         }
     },
@@ -196,7 +196,7 @@ let GameManager = {
         '<span class="higherNumber">H</span>' +
             '</div>' +
             '<div class="newGameBTN">' +
-                '<button type="button" onclick="GameManager.setGameStart()">Nieuw Spel</button>' +
+                '<button type="button" onclick="GameManager.setGameStart()">New Game</button>' +
             '</div>' +
             '<div class="wins"></div>' +
             '<div class="loses"></div>' +
